@@ -16,7 +16,7 @@ var server = http.createServer(app);
 var io = new socketio.Server(server);
 
 app.use(helmet());
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(morgan('dev'));
 app.use(express.json());
 
